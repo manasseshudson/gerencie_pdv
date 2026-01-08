@@ -131,11 +131,11 @@
                 <!-- END TOP-LEFT TOOLBAR-->
                 <!-- START TOP-RIGHT TOOLBAR-->
                 <ul class="nav navbar-toolbar">
-                    <div class="material-switch pull-right" style="margin-right: 35px;">
+                    <!--<div class="material-switch pull-right" style="margin-right: 35px;">
 						<a class="" style="margin-right: 25px;font-size: 18px;font-weight: bold;">Mostrar Valores</a>
 						<input id="someSwitchOptionSuccess" name="someSwitchOption001" type="checkbox"/>
 						<label for="someSwitchOptionSuccess" class="label-success"></label>
-					</div>
+					</div>-->
                 </ul>
                 <!-- END TOP-RIGHT TOOLBAR-->
             </div>
@@ -345,8 +345,10 @@
 			var receber = formatNumber.format(vlrsaidas);
 			var recebido = formatNumber.format(<%= total_recebido %>);
 			
+			document.getElementById("vlrTotalReceber").innerHTML=receber;
+			document.getElementById("vlrTotalRecebidos").innerHTML=recebido;
 			
-
+			/*
 			document.getElementById("vlrTotalReceber").innerHTML="******";
 			document.getElementById("vlrTotalRecebidos").innerHTML="******";
 			
@@ -365,7 +367,7 @@
 					document.getElementById("vlrTotalRecebidos").innerHTML="******";
 				}
 			});
-			
+			*/
 			
 			$('#cadastrarUsuarios').click(function(){
 				let uid_usuario = $('#uid_usuario').val();
